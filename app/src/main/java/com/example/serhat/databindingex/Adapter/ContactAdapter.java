@@ -42,7 +42,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.BindingH
     @Override
     public BindingHolder onCreateViewHolder(ViewGroup parent, int type) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_movie, parent, false);
+                .inflate(R.layout.item_contact, parent, false);
         BindingHolder holder = new BindingHolder(v);
         return holder;
     }

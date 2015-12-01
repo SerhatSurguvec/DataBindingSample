@@ -16,7 +16,7 @@ import com.example.serhat.databindingex.databinding.ActivityMainBinding;
 import java.util.Random;
 
 
-public class MainActivity extends AppCompatActivity implements MainActivityInterface {
+public class RecyclerViewActivity extends AppCompatActivity implements RecyclerViewActivityInterface {
 
     private ObservableArrayList<ContactVM> contacts;
 
@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
             int i = r.nextInt(contacts.size());
 
             if (i % 2 == 0) {
-                contacts.add(i, new ContactVM(new Contact("Luke", "Skywalker", "Jedi")));
+                contacts.add(i, new ContactVM(new Contact("Luke", "Skywalker", "Jedi", "https://qph.is.quoracdn.net/main-thumb-t-5453-200-lI0oLEMakK0gQnpiAIRjnqrPkWuuEqhb.jpeg")));
             } else {
-                contacts.add(i, new ContactVM(new Contact("Darth", "Vader", "Sith Lord")));
+                contacts.add(i, new ContactVM(new Contact("Darth", "Vader", "Sith Lord", "https://v.cdn.vine.co/r/avatars/029BC4BA321006251604967583744_14e51fdcd15.4_.wDNpUU6Rm0BnbjO50GLCMXj_xPbgo7qM_iF80q407pvJwpwujxB0YbSIUCYn3Xm.jpg?versionId=gS42_GlpfiE.08kei3xr69Al0K48qcbB")));
             }
 
         } else {
-            contacts.add(new ContactVM(new Contact("R2D2", "!^+!%", "Astromech Droid")));
+            contacts.add(new ContactVM(new Contact("R2D2", "!^+!%", "Astromech Droid", "http://rs1295.pbsrc.com/albums/b622/ChrisClarkeStudio/R2D2-C3PO_EP4-KEY-63_R_8x101_zps8b54614d.jpg~c200")));
         }
 
     }

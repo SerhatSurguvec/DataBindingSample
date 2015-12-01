@@ -7,14 +7,16 @@ public class Contact {
     private String name;
     private String surname;
     private String title;
+    private String imageUrl;
 
     public Contact() {
     }
 
-    public Contact(String name, String surname, String title) {
+    public Contact(String name, String surname, String title, String imageUrl) {
         this.setName(name);
         this.setSurname(surname);
         this.setTitle(title);
+        this.setImageUrl(imageUrl);
     }
 
     public String getName() {
@@ -39,5 +41,13 @@ public class Contact {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

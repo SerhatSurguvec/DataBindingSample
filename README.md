@@ -1,4 +1,4 @@
 # DataBindingSample
 Android Data Binding Sample Project
 
-- RecyclerView Sample
+- RecyclerView with ImageView Sample

@@ -8,7 +8,7 @@
 
         <import type="com.example.serhat.databindingex.ViewModel.ContactVM" />
 
-        <import type="com.example.serhat.databindingex.View.MainActivity" />
+        <import type="com.example.serhat.databindingex.View.RecyclerViewActivity" />
 
         <variable
             name="contacts"
@@ -16,7 +16,7 @@
 
         <variable
             name="handler"
-            type="com.example.serhat.databindingex.View.MainActivityInterface" />
+            type="com.example.serhat.databindingex.View.RecyclerViewActivityInterface" />
 
     </data>
 

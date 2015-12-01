@@ -32,6 +32,12 @@ public class ContactVM extends BaseObservable {
         return contact.getTitle();
     }
 
+
+    @Bindable
+    public String getImageUrl() {
+        return contact.getImageUrl();
+    }
+
     public void setName(String name) {
         this.contact.setName(name);
         notifyPropertyChanged(BR.name);
@@ -47,11 +53,17 @@ public class ContactVM extends BaseObservable {
         notifyPropertyChanged(BR.title);
     }
 
+    public void setImageUrl(String imageUrl) {
+        this.contact.setImageUrl(imageUrl);
+        notifyPropertyChanged(BR.imageUrl);
+    }
+
     public void setContact(Contact contact) {
         this.contact = contact;
         notifyPropertyChanged(BR.name);
         notifyPropertyChanged(BR.surname);
         notifyPropertyChanged(BR.title);
+        notifyPropertyChanged(BR.imageUrl);
     }
 
 }
