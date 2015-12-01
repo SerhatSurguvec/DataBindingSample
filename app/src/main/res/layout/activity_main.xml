@@ -1,0 +1,74 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.databinding.ObservableArrayList" />
+
+        <import type="android.view.View" />
+
+        <import type="com.example.serhat.databindingex.ViewModel.ContactVM" />
+
+        <import type="com.example.serhat.databindingex.View.MainActivity" />
+
+        <variable
+            name="contacts"
+            type="ObservableArrayList&lt;ContactVM>" />
+
+        <variable
+            name="handler"
+            type="com.example.serhat.databindingex.View.MainActivityInterface" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="@{contacts.size() > 0 ? View.GONE : View.VISIBLE}" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/background_dark"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:onClick="@{handler.onAddClicked}"
+                android:text="Random\nAdd" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:onClick="@{handler.onChangeClicked}"
+                android:text="Random\nChange" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:onClick="@{handler.onRemoveClicked}"
+                android:text="Random\nRemove" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>  
